@@ -7,7 +7,7 @@ WORKDIR /app/shippy-service-user
 
 COPY . .
 
-RUN go mod download
+#RUN go mod download
 RUN CGO_ENABLED=0 GOOS=linux go build -o shippy-service-user -a -installsuffix cgo main.go repository.go handler.go database.go
 
 
